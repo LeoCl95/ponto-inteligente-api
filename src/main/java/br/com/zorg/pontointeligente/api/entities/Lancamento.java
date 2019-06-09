@@ -24,7 +24,7 @@ import br.com.zorg.pontointeligente.api.enums.TipoEnum;
 @Table(name = "lancamento")
 public class Lancamento implements Serializable {
 
-	private static final long serialVersionUID = -6303357572687127119L;
+	private static final long serialVersionUID = 6524560251526772839L;
 
 	private Long id;
 	private Date data;
@@ -35,8 +35,7 @@ public class Lancamento implements Serializable {
 	private TipoEnum tipo;
 	private Funcionario funcionario;
 
-	private Lancamento() {
-
+	public Lancamento() {
 	}
 
 	@Id
@@ -59,7 +58,7 @@ public class Lancamento implements Serializable {
 		this.data = data;
 	}
 
-	@Column(name = "descricao", nullable = false)
+	@Column(name = "descricao", nullable = true)
 	public String getDescricao() {
 		return descricao;
 	}
@@ -68,7 +67,7 @@ public class Lancamento implements Serializable {
 		this.descricao = descricao;
 	}
 
-	@Column(name = "localizacao", nullable = false)
+	@Column(name = "localizacao", nullable = true)
 	public String getLocalizacao() {
 		return localizacao;
 	}
